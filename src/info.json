@@ -1,0 +1,10 @@
+{
+"index": {
+      "title":"Static Website Boilerplate",
+      "description": "This is a boilerplate for create a static HTML CSS & Js website"
+   },
+  "navmenu": [
+    { "name": "About Us", "url": "about" },
+    { "name": "Contact Us", "url": "contact" }
+  ]
+}

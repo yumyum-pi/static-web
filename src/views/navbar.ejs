@@ -1,0 +1,63 @@
+<!-- Navigation-bar/Start -->
+<style>
+   .close span:first-child {
+      transform: translate(0,5px) rotate(45deg);
+   }
+   .close span:last-child {
+      transform: translate(0,-5px) rotate(-45deg);
+   }
+</style>
+<nav class="bg-grey-10 z-50 flex flex-col px-3 py-5 overflow-hidden items-center
+   shadow-lg top-0 fixed w-screen rounded-b-2xl top-0 left-0 right-0
+   md:py-3 md:px-3
+   lg:px-12
+   xl:px-28
+">
+   <div id="navbar" class="max-w-screen-xl flex flex-col h-8 flex-grow w-full
+      md:flex-row
+   ">
+      <a href="/" class="flex flex-shrink-0 ">
+         <img
+               src="/img/logo.jpg"
+               alt="logo"
+               class="object-contain w-8 h-8 mr-3 md:mr-5 lg:mr-10"
+               />
+      </a>
+      <div id="nav-btn"
+         class="dropbtn w-9 h-9 transition-all duration-300 ease-in-out flex flex-col
+            align-center absolute py-3 bg-primary
+            right-3 top-4
+            cursor-pointer rounded-full md:hidden
+         "
+         onclick="toggleNav()"
+      >
+         <span class="w-5 h-2 bg-white mx-auto mb-2"></span>
+         <span class="w-5 h-2 bg-white mx-auto"></span>
+      </div>
+      <div id="nav-menu"
+         class="overflow-y-hidden
+            md:h-auto md:opacity-100 md:w-full md:flex md:animate-none md:opacity-100
+            transition-opacity duration-500 ease-in-out
+      ">
+         <div class="flex flex-col py-4 flex-grow uppercase leading-none
+               text-primary font-title font-bold text-sm
+               md:flex-row md:py-0
+            ">
+            <% navmenu.forEach(function(menu, i){ %>
+               <a href="<%= menu.url %>"
+                  class="p-2 rounded-lg text-white leading-4 tracing-widest text-sm
+                     hover:bg-pink
+               ">
+                  <%= menu.name %>
+               </a>
+            <% }); %>
+         </div>
+         <span class="space-x-4">
+            <%- include('./button_secondary_small.ejs',{ button: { url:"#", label:"CTA Button 2" } })%>
+            <%- include('./button_primary_small.ejs',{ button: { url:"#", label:"CTA Button 1" } })%>
+         </span>
+      </div>
+   </div>
+</nav>
+<!-- Navigation-bar/End -->
+
