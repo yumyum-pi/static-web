@@ -1,4 +1,5 @@
 # Static Website Boilerplate
+This is a boilderplat to create static html css websites using tailwindcss.
 
 ## Requirement
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -18,8 +19,22 @@ npm install
 ```
 
 ## Usage
+```bash
+# Start by configuring the tailwind. After configuring, run the following command to create the css file.
+# Use this command after change the tailwind config file.
+npm run css
+```
+```bash
+# Start developer server.
+npm run dev
+```
 
 ```bash
-# Run the website
+# Build the static website:
+npm run build
+```
+
+```bash
+# Sever the static website:
 npm start
 ```
